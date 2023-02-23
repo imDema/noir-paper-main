@@ -1,0 +1,34 @@
+[package]
+name = "nexparse"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+clap = { version = "4.1.7", features = ["derive"] }
+env_logger = "0.10.0"
+eyre = "0.6.8"
+itertools = "0.10.5"
+log = "0.4.17"
+nom = "7.1.3"
+regex = "1.7.1"
+serde = { version = "1.0.152", features = ["derive"] }
+serde_json = "1.0.93"
+xshell = "0.2.3"
+
+[[bin]]
+name = "nexparse-flink"
+path = "src/main-flink.rs"
+
+[[bin]]
+name = "nexparse-noir"
+path = "src/main-noir.rs"
+
+[[bin]]
+name = "nexparse-noir-2"
+path = "src/main-noir-2.rs"
+
+[[bin]]
+name = "nexparse-regex"
+path = "src/main-regex.rs"

@@ -1,0 +1,92 @@
+language,filename,blank,comment,code,"github.com/AlDanial/cloc v 1.94  T=0.05 s (1900.9 files/s 147344.2 lines/s)"
+C++,./batch/kmeans/mpi/main.cpp,41,54,222
+C++,./batch/enum-triangles/mpi/main.cpp,30,10,204
+C++,./batch/collisions/mpi/queries.cpp,17,13,197
+Rust,./batch/collisions/noir/car_accidents.rs,20,10,192
+Rust,./streaming/nexmark-common/timely/timely.rs,49,11,189
+C++,./batch/transitive-closure/mpi/main.cpp,24,2,162
+C++,./single/kmeans/openmp/main.cpp,27,33,142
+Java,./batch/collisions/flink/CarAccidents.java,18,27,139
+Rust,./single/kmeans/rayon/rayon-kmeans.rs,20,1,131
+Rust,./streaming/nexmark-q6/timely/q6.rs,10,2,128
+Rust,./batch/kmeans/noir/kmeans.rs,19,0,125
+Java,./batch/pagerank-flink/flink/PageRank.java,35,33,125
+Rust,./single/kmeans/noir/kmeans.rs,19,0,125
+Rust,./streaming/nexmark-q4/timely/q4.rs,10,2,125
+Rust,./streaming/nexmark-q5/timely/q5.rs,13,2,119
+Java,./batch/enum-triangles/flink/util/EnumTrianglesDataTypes.java,31,3,99
+Java,./batch/connected-components/flink/ConnectedComponents.java,27,39,97
+Rust,./batch/wc-re/timely/timely-wordcount_assoc.rs,12,3,93
+CSV,./cloc.csv,0,0,90
+C++,./batch/collisions/mpi/datatypes.cpp,17,1,85
+C++,./batch/connected-components/mpi/main.cpp,10,4,85
+Java,./batch/transitive-closure/flink/TransitiveClosureNaive.java,13,7,82
+C++,./batch/wc-opt/mpi/main.cpp,21,3,77
+C++,./batch/wc-re/mpi/main.cpp,21,3,77
+C++,./batch/pagerank-mpi/mpi/main.cpp,9,4,74
+Rust,./batch/pagerank-timely/timely/differential-pagerank.rs,16,11,73
+Rust,./batch/connected-components/noir/connected_components.rs,9,14,70
+Rust,./streaming/nexmark-q7/timely/q7.rs,6,2,70
+C++,./single/wc/openmp/src/iostream.cpp,5,0,68
+Java,./batch/kmeans/flink/Centroid.java,15,64,67
+Rust,./streaming/nexmark-common/noir/nexmark.rs,8,0,67
+CSV,./loc.csv,0,0,66
+CSV,./gzipped.csv,0,0,65
+Rust,./streaming/nexmark-q8/timely/q8.rs,6,1,65
+Rust,./streaming/nexmark-q6/noir/nexmark.rs,2,2,64
+Java,./batch/kmeans/flink/KMeans.java,15,9,63
+C++,./batch/wc-re/mpi/iostream.cpp,8,0,61
+Java,./batch/enum-triangles/flink/EnumTriangles.java,11,9,60
+Rust,./batch/pagerank-flink/noir/pagerank.rs,8,8,59
+Rust,./streaming/nexmark-q3/timely/q3.rs,5,2,59
+Rust,./batch/pagerank-mpi/noir/pagerank_stateful.rs,8,4,58
+Rust,./streaming/nexmark-q4/noir/nexmark.rs,2,0,58
+Rust,./batch/pagerank-timely/noir/pagerank_timely.rs,11,0,50
+C++,./single/collatz/openmp/main.cpp,4,0,48
+SQL,./streaming/nexmark-common/flink/ddl_gen.sql,0,0,46
+C++,./batch/collisions/mpi/executor.cpp,12,13,45
+C/C++ Header,./batch/collisions/mpi/queries.hpp,21,45,45
+Rust,./batch/enum-triangles/noir/triangles_fold.rs,7,4,44
+C++,./batch/wc-opt/mpi/mmap.cpp,7,0,44
+C/C++ Header,./batch/collisions/mpi/model.hpp,9,10,40
+Rust,./batch/transitive-closure/noir/transitive_closure.rs,8,5,39
+Rust,./single/wc/rayon/rayon-wordcount-mem.rs,7,0,39
+SQL,./streaming/nexmark-q5/flink/q5.sql,1,0,39
+C++,./batch/collisions/mpi/main.cpp,9,4,34
+SQL,./streaming/nexmark-common/flink/ddl_views.sql,2,0,34
+Rust,./batch/wc-opt/noir/wordcount_opt.rs,4,0,30
+Rust,./single/collatz/noir/noir-collatz.rs,4,0,30
+Rust,./single/wc/noir/noir-wordcount_assoc.rs,7,0,29
+Rust,./streaming/nexmark-q8/noir/nexmark.rs,3,0,29
+Java,./batch/kmeans/flink/SelectNearestCenter.java,8,23,28
+Rust,./batch/wc-re/noir/wordcount_assoc.rs,6,0,28
+Rust,./streaming/nexmark-common/timely/mod.rs,6,0,28
+C++,./batch/collisions/mpi/mpiutils.cpp,13,7,26
+Java,./batch/wc-re/flink/WordCount.java,10,19,26
+SQL,./streaming/nexmark-q8/flink/q8.sql,1,0,24
+Rust,./single/collatz/rayon/rayon-collatz.rs,1,0,23
+Rust,./streaming/nexmark-q3/noir/nexmark.rs,0,0,23
+C/C++ Header,./batch/collisions/mpi/executor.hpp,3,12,22
+SQL,./streaming/nexmark-q4/flink/q4.sql,2,0,21
+Rust,./streaming/nexmark-q5/noir/nexmark.rs,1,1,20
+SQL,./streaming/nexmark-q7/flink/q7.sql,1,0,19
+SQL,./streaming/nexmark-q1/flink/q1.sql,1,0,17
+SQL,./streaming/nexmark-q6/flink/q6.sql,1,0,17
+Rust,./streaming/nexmark-q7/noir/nexmark.rs,0,0,17
+C++,./single/wc/openmp/src/main.cpp,4,0,16
+SQL,./streaming/nexmark-q3/flink/q3.sql,1,0,15
+SQL,./streaming/nexmark-q0/flink/q0.sql,1,0,11
+Rust,./streaming/nexmark-q2/timely/q2.rs,0,0,11
+JSON,./.vscode/settings.json,0,0,9
+Markdown,./README.md,2,0,9
+Jupyter Notebook,./aggregate.ipynb,0,195,9
+Rust,./streaming/nexmark-q1/noir/nexmark.rs,0,0,9
+Rust,./streaming/nexmark-q1/timely/q1.rs,0,0,9
+Bourne Shell,./gzipped-size.sh,0,0,8
+SQL,./streaming/nexmark-q2/flink/q2.sql,1,0,8
+Rust,./streaming/nexmark-q0/timely/q0.rs,0,0,7
+Rust,./streaming/nexmark-q2/noir/nexmark.rs,0,0,6
+C/C++ Header,./batch/collisions/mpi/mpiutils.hpp,2,2,5
+C/C++ Header,./batch/collisions/mpi/datatypes.hpp,2,3,4
+Rust,./streaming/nexmark-q0/noir/nexmark.rs,0,0,3
+SUM,,820,736,5420

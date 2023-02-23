@@ -1,0 +1,4 @@
+# config.yaml
+results*
+plots/target
+__pycache__

@@ -2,3 +2,5 @@ data/
 .vscode/
 tools/init-instance.sh
 results/
+results_old/
+/*.tzst

@@ -1,0 +1,69 @@
+- name: Setup
+  hosts: noir
+  tasks:
+   - name: apt full upgrade
+     apt:
+      update_cache: yes
+      upgrade: dist
+      autoremove: yes
+      autoclean: yes
+     become: yes
+   - name: apt install packages
+     apt:
+      pkg:
+       - rsync
+       - openssl
+       - libssl-dev
+       - pkg-config
+     become: yes
+
+- name: Install rust
+  hosts: noir
+  tasks:
+  - name: check if cargo is installed
+    ansible.builtin.command: ls ~/.cargo/bin/cargo
+    register: cargo_exists
+    ignore_errors: yes
+  - name: download rustup installer
+    when: cargo_exists is failed
+    get_url:
+      url: https://sh.rustup.rs
+      dest: /tmp/sh.rustup.rs
+      mode: '0755'
+      force: 'yes'
+  - name: install rust
+    when: cargo_exists is failed
+    ansible.builtin.command: /tmp/sh.rustup.rs -y
+  - name: update rust
+    ansible.builtin.command: ~/.cargo/bin/rustup update
+
+- name: Configure network
+  hosts: noir
+  tasks:
+   - name: Ensure /etc/hosts entries from file
+     lineinfile:
+       path: /etc/hosts
+       line: "{{ item }}"
+       regexp: "{{ item.split()[1] }}$"
+       state: present
+     become: yes
+     loop: "{{ lookup('file', 'hosts.txt').splitlines() }}"
+
+- name: Send noir
+  hosts: noir
+  tasks:
+   - name: send noir-main
+     synchronize:
+      src: ~/noir-main/
+      dest: ~/noir-main/
+      rsync_opts:
+       - "--filter=:- .gitignore"
+       - "-u"
+
+- name: Send dataset
+  hosts: noir
+  tasks:
+   - name: send dataset
+     synchronize:
+      src: ~/noir-main/data/wordcount
+      dest: ~/noir-main/data/

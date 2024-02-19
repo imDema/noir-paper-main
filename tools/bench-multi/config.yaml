@@ -1,9 +1,9 @@
 # The list of known workers
 known_hosts:
- - StreamWorker1
- - StreamWorker2
- - StreamWorker3
- - StreamWorker4
+ - g1
+ - g2
+ - g3
+ - g4
 
 # Name of the directory where to place the execution results
 results_dir: "../../results/raw/multi/{experiment}/{system}"
@@ -19,12 +19,13 @@ flink_base_path: /home/ubuntu/flink
 # the results
 warmup: true
 # Number of runs from which data is collected
-num_runs: 3
+num_runs: 1
 
 # List of hyper parameters to try. All the combinations of values will be tried.
 hyperparameters:
   # Number of hosts to run the benchmark on
-  num_hosts: [4, 3, 2, 1]
+#   num_hosts: [4, 3, 2, 1]
+  num_hosts: [4, 2]
   # When using RStream this is the number of "slots" in the hostfile (sources
   # and sinks are added automatically).
   # In Flink and MPI it's the number of slots assigned to each worker.

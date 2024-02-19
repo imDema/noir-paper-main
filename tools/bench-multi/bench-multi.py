@@ -233,8 +233,9 @@ class Noir(RStream):
         ) as configfile:
             config_content = "hosts:\n"
             for i, host in enumerate(self.config["known_hosts"][:num_hosts]):
+                # config_content += " - address: %s:9500\n" % host
                 config_content += " - address: %s\n" % host
-                config_content += "   base_port: 10000\n"
+                config_content += "   base_port: 9500\n"
                 config_content += "   num_cores: %d\n" % procs_per_host
                 config_content += "   ssh:\n"
                 config_content += "     username: ubuntu\n"
@@ -506,7 +507,7 @@ def sync_from(host, remote_path, local_path):
 
 def ping_host(host):
     proc = subprocess.run(
-        "ping %s -c 1 -w 5" % host, shell=True, capture_output=True, check=True
+        "ping %s -c 1 -w 1" % host, shell=True, capture_output=True, check=True
     )
     stdout = proc.stdout.decode().splitlines()
     times = []

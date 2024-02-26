@@ -15,6 +15,8 @@
        - openssl
        - libssl-dev
        - pkg-config
+       - clang
+       - gcc
      become: yes
 
 - name: Install rust
@@ -49,21 +51,27 @@
      become: yes
      loop: "{{ lookup('file', 'hosts.txt').splitlines() }}"
 
-- name: Send noir
+- name: Send sync
   hosts: noir
   tasks:
    - name: send noir-main
      synchronize:
-      src: ~/noir-main/
-      dest: ~/noir-main/
+      src: ~/sync/
+      dest: ~/sync/
       rsync_opts:
        - "--filter=:- .gitignore"
        - "-u"
+       - "--delete"
 
 - name: Send dataset
   hosts: noir
   tasks:
-   - name: send dataset
+   - name: send home dataset
      synchronize:
-      src: ~/noir-main/data/wordcount
-      dest: ~/noir-main/data/
+      src: ~/data/
+      dest: ~/data/
+   - name: send root dataset
+     synchronize:
+      src: /data/
+      dest: /data/
+     become: yes
